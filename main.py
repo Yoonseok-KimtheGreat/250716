@@ -37,16 +37,17 @@ recommendations = {
         ("🇨🇿 프라하, 체코", "중세의 고즈넉한 분위기에서 조용한 내면의 성찰을 즐길 수 있어요."),
         ("🇬🇧 옥스퍼드, 영국", "지적 호기심이 가득한 도시에서 사색에 빠져보세요."),
     ],
-    # 나머지 MBTI도 비슷한 방식으로 추가 가능
+    # 다른 MBTI 유형도 필요하면 추가 가능
 }
 
-# 선택 후 추천 결과 출력
+# 추천 결과 출력
 if mbti in recommendations:
     st.markdown(f"### 🎯 {mbti} 유형에게 추천하는 여행지")
     for place, reason in recommendations[mbti]:
-        st.markdown(f"**{place}**  
-        👉 {reason}\n")
+        st.markdown(f"""**{place}**  
+👉 {reason}  
+""")
     st.success("여행 계획 짜러 가볼까요? 🎒✈️")
     st.balloons()
 else:
-    st.warning("선택한 MBTI에 대한 정보가 아직 준비되지 않았어요. 곧 업데이트할게요! ⏳")
+    st.warning("선택한 MBTI에 대한 정보가 아직 준비되지 않았어요. ⏳")
